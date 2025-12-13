@@ -1,0 +1,173 @@
+:root {
+    --bs-dark: #000000;
+}
+
+/* Navbar negro puro */
+.bg-dark {
+    color: #000000;
+}
+
+
+.footer {
+    background-color: #0d6efd !important;
+}
+
+/* Links blancos */
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: white !important;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Navbar base */
+.navbar-custom {
+    background-color: transparent;
+    transition: background-color 0.3s ease, height 0.3s ease;
+    height: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.hero {
+    height: 80vh;
+    background-image: url("../Assets/img/Casa_bonita.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-top: -90px;
+    padding-top: 90px;
+    position: relative;
+}
+
+/* TEXTO */
+.hero-caption {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Links */
+.navbar-custom .nav-link {
+    color: #fff !important;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #0d6efd !important;
+}
+
+
+/* Logo */
+.logo {
+    max-height: 130px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transition: max-height 0.3s ease;
+}
+
+/* Nuevo CSS: Estilos de la barra de navegación cuando se hace scroll */
+.navbar-custom.navbar-shrink {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Opcional: Para reducir el logo junto con la barra (si es necesario) */
+.navbar-custom.navbar-shrink .logo {
+    max-height: 120px;
+}
+
+.services-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.contact-section-dark-map {
+    background-image: url("../Assets/img/Sillones_bonitos.jpg");
+    /* Un gris oscuro similar al de la imagen */
+    /* Puedes simular el mapa de puntos con una imagen de fondo si la tienes, o dejar solo el color oscuro. */
+    /* background-image: url('URL_DE_TU_IMAGEN_DE_MAPA'); */
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Ajuste de color para el subtítulo en fondo oscuro */
+.contact-section-dark-map .section-subheading {
+    color: #ced4da !important;
+    /* Gris claro para el subtítulo */
+}
+
+/* 2. LA TARJETA BLANCA FLOTANTE (Formulario) */
+.contact-form-card-floating {
+    background-color: #ffffff;
+    /* Fondo Blanco */
+    border-radius: 50px;
+    /* Bordes ligeramente redondeados */
+    /* La sombra le da ese efecto de "flotar" que buscabas */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    max-width: 1000px;
+    /* Limita el ancho del formulario */
+    margin: 0 auto;
+    /* Centra el formulario en la página */
+}
+
+/* 3. Estilo de los Campos de Formulario dentro de la tarjeta BLANCA */
+/* Usamos el color de borde predeterminado para que se integre bien al fondo blanco. */
+.form-control-white {
+    /* Quitamos el fondo blanco de los campos si estás usando la clase Bootstrap por defecto */
+    background-color: #ffffff;
+    border-radius: 10;
+    /* Bordes cuadrados como en la imagen de referencia */
+    height: 55px;
+    /* Altura uniforme para los campos de texto/email/teléfono */
+}
+
+/* Estilo al enfocar (cuando el usuario hace click en el campo) */
+.form-control-white:focus {
+    border-color: #0d6efd;
+    /* Azul de Bootstrap */
+    box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.2);
+    /* Sombra suave */
+}
+
+/* 4. Altura del Textarea (Mensaje) */
+.form-group-textarea textarea {
+    min-height: 200px;
+    /* Altura que equilibra las dos columnas */
+}
+
+/* 5. Estilo del Botón (Usando el azul oficial de Bootstrap) */
+.btn-bootstrap-blue {
+    background-color: #0d6efd;
+    /* Azul de Bootstrap */
+    color: white;
+    font-weight: 700;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+}
+
+.btn-bootstrap-blue:hover {
+    background-color: #0b5ed7;
+    color: white;
+}
