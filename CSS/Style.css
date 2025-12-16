@@ -8,10 +8,6 @@
 }
 
 
-.footer {
-    background-color: #0d6efd !important;
-}
-
 /* Links blancos */
 .navbar .nav-link,
 .navbar .navbar-brand {
@@ -52,7 +48,7 @@ header {
     left: 50%;
     transform: translateX(-50%);
 
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0);
     color: white;
     padding: 12px 24px;
     border-radius: 6px;
@@ -82,7 +78,7 @@ header {
 
 /* Nuevo CSS: Estilos de la barra de navegación cuando se hace scroll */
 .navbar-custom.navbar-shrink {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.651);
     height: 80px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -95,79 +91,275 @@ header {
 
 .services-section {
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
 }
 
+/* =========================
+   SECCIÓN CONTACTO CON FONDO
+========================= */
 .contact-section-dark-map {
+    position: relative;
     background-image: url("../Assets/img/Sillones_bonitos.jpg");
-    /* Un gris oscuro similar al de la imagen */
-    /* Puedes simular el mapa de puntos con una imagen de fondo si la tienes, o dejar solo el color oscuro. */
-    /* background-image: url('URL_DE_TU_IMAGEN_DE_MAPA'); */
     background-size: cover;
     background-position: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-/* Ajuste de color para el subtítulo en fondo oscuro */
+/* Overlay oscuro para legibilidad (muy importante) */
+.contact-section-dark-map::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 20, 30, 0.55);
+    z-index: 1;
+}
+
+/* Todo el contenido por encima del overlay */
+.contact-section-dark-map>.container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Subtítulo sobre fondo oscuro */
 .contact-section-dark-map .section-subheading {
-    color: #ced4da !important;
-    /* Gris claro para el subtítulo */
+    color: #ced4da;
 }
 
-/* 2. LA TARJETA BLANCA FLOTANTE (Formulario) */
+
+/* =========================
+   FORMULARIO FLOTANTE
+========================= */
 .contact-form-card-floating {
     background-color: #ffffff;
-    /* Fondo Blanco */
-    border-radius: 50px;
-    /* Bordes ligeramente redondeados */
-    /* La sombra le da ese efecto de "flotar" que buscabas */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    border-radius: 28px;
+    box-shadow: 0 40px 80px rgb(0, 0, 0);
     max-width: 1000px;
-    /* Limita el ancho del formulario */
-    margin: 0 auto;
-    /* Centra el formulario en la página */
+    /* CAMBIO CLAVE: Reducimos el margen superior de 140px */
+    margin: 40px auto 0;
+    /* Nuevo margen: 40px arriba, centrado, 0 abajo */
+    padding: 60px;
 }
 
-/* 3. Estilo de los Campos de Formulario dentro de la tarjeta BLANCA */
-/* Usamos el color de borde predeterminado para que se integre bien al fondo blanco. */
+/* CAMPOS DE FORMULARIO */
 .form-control-white {
-    /* Quitamos el fondo blanco de los campos si estás usando la clase Bootstrap por defecto */
-    background-color: #ffffff;
-    border-radius: 10;
-    /* Bordes cuadrados como en la imagen de referencia */
-    height: 55px;
-    /* Altura uniforme para los campos de texto/email/teléfono */
+    height: 52px;
+    border-radius: 8px;
 }
 
-/* Estilo al enfocar (cuando el usuario hace click en el campo) */
 .form-control-white:focus {
     border-color: #0d6efd;
-    /* Azul de Bootstrap */
     box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.2);
-    /* Sombra suave */
 }
 
-/* 4. Altura del Textarea (Mensaje) */
-.form-group-textarea textarea {
+textarea.form-control-white {
     min-height: 200px;
-    /* Altura que equilibra las dos columnas */
 }
 
-/* 5. Estilo del Botón (Usando el azul oficial de Bootstrap) */
 .btn-bootstrap-blue {
     background-color: #0d6efd;
-    /* Azul de Bootstrap */
-    color: white;
+    color: #ffffff;
     font-weight: 700;
     border: none;
     padding: 15px 30px;
     border-radius: 10px;
-    /* Bordes redondeados */
     transition: background-color 0.3s ease;
 }
 
 .btn-bootstrap-blue:hover {
     background-color: #0b5ed7;
-    color: white;
+    color: #ffffff;
+}
+
+/* =========================
+   tarjetas de contacto 
+========================= */
+.contact-cards-row {
+    margin-bottom: 80px;
+}
+
+.card-contact-info {
+    background-color: #ffffff;
+    border-radius: 14px;
+    border: none;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.979);
+    transition: transform 0.3s ease;
+}
+
+.card-contact-info:hover {
+    transform: translateY(-6px);
+}
+
+.icon-blue {
+    font-size: 2.4rem;
+    color: #0d6efd;
+}
+
+.card-contact-info .card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #212529;
+}
+
+.card-contact-info .card-text {
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+
+/* =========================
+   SECCIÓN NOSOTROS (IMG)
+========================= */
+.about-img-wrapper {
+    width: 100%;
+    max-width: 480px;
+    height: 420px;
+    margin-left: auto;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.about-img-wrapper-uno {
+    width: 100%;
+    max-width: 480px;
+    height: 420px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+.about-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nosotros-section {
+    padding: 100px 0 80px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .contact-cards-wrapper {
+        position: static;
+        margin-bottom: 40px;
+    }
+
+    .contact-form-card-floating {
+        margin-top: 0;
+        padding: 40px 25px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .card-contact-info .card-title {
+        font-size: 0.9rem;
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer.footer {
+    background-color: #1f2933;
+    color: #ffffff;
+}
+
+footer.footer .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+footer.footer .footer-logo {
+    max-width: 260px;
+    margin-bottom: 12px;
+    margin-left: -15px;
+    /* ajuste óptico correcto */
+}
+
+footer.footer .footer-text {
+    color: #cfd8dc;
+    font-size: 14px;
+    max-width: 320px;
+}
+
+footer.footer .footer-title {
+    font-weight: 600;
+    color: #ffffff;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+footer.footer .footer-title::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #0d6efd;
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+footer.footer ul.footer-links,
+footer.footer ul.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer.footer ul.footer-links li,
+footer.footer ul.footer-contact li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #cfd8dc;
+}
+
+footer.footer ul.footer-links li a {
+    color: #cfd8dc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer.footer ul.footer-links li a:hover {
+    color: #0d6efd;
+}
+
+footer.footer .social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #0d6efd;
+    color: #ffffff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+footer.footer .social-icon:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-3px);
+}
+
+footer.footer .footer-contact i {
+    color: #0d6efd;
+    margin-right: 8px;
+}
+
+footer.footer .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    color: #cfd8dc;
+    font-size: 13px;
 }
