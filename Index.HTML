@@ -50,15 +50,67 @@
     <!-- MAIN TODO EL CUERPO DE LA PAGINA TODAS LAS SECCIONES -->
     <main>
         <!-- SECCION INICIO  -->
-        <section class="hero" id="inicio">
-            <div class="hero-caption"> <!-- CLASS HERO CAPTION -- LA FOTO DEL INICIO  -->
-                <h5>Limpiezas profesionales</h5>
-                <p>Descubre las mejores ofertas en Limpiezas de alfombras y cortinas</p>
-                <div class="text-center p-4">
-                    <button class="btn btn-xl text-uppercase btn-bootstrap-blue" id="submitButton" type="submit">
-                        Contactanos!
-                    </button>
+        <section id="inicio">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="10000" data-bs-pause="false">
+
+                <div class="carousel-inner">
+
+                    <!-- SLIDE 1 -->
+                    <div class="carousel-item active">
+                        <div class="hero-slide" style="background-image: url('../Assets/img/Casa_bonita.jpg');">
+                            <div class="hero-caption">
+                                <h5>Limpiezas profesionales</h5>
+                                <p>Descubre las mejores ofertas en limpieza de alfombras y cortinas</p>
+                                <div class="text-center p-4">
+                                    <button class="btn btn-xl text-uppercase btn-bootstrap-blue">
+                                        Contáctanos
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2 -->
+                    <div class="carousel-item">
+                        <div class="hero-slide" style="background-image: url('../Assets/img/Sillones_bonitos.jpg');">
+                            <div class="hero-caption">
+                                <h5>Limpiezas profesionales</h5>
+                                <p>Descubre las mejores ofertas en limpieza de alfombras y cortinas</p>
+                                <div class="text-center p-4">
+                                    <button class="btn btn-xl text-uppercase btn-bootstrap-blue">
+                                        Contáctanos
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3 -->
+                    <div class="carousel-item">
+                        <div class="hero-slide" style="background-image: url('../Assets/img/alfombras_lavando.jpg');">
+                            <div class="hero-caption">
+                                <h5>Limpiezas profesionales</h5>
+                                <p>Descubre las mejores ofertas en limpieza de alfombras y cortinas</p>
+                                <div class="text-center p-4">
+                                    <button class="btn btn-xl text-uppercase btn-bootstrap-blue">
+                                        Contáctanos
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
+                <!-- CONTROLES -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
             </div>
         </section>
         <!-- SECCION NOSOTROS  -->
@@ -71,7 +123,7 @@
                         <span class="text-primary fw-semibold">Quienes somos?</span>
 
                         <h2 class="fw-bold display-6 mt-2">
-                            Limpieza Profesional de Alfombras
+                            Limpieza Profesional de alfombras y cortinas
                         </h2>
 
                         <p class="text-muted mt-3">
@@ -106,21 +158,19 @@
 
                     <div class="col-lg-6">
                         <div class="about-img-wrapper-uno">
-                            <img src="Assets/img/Cortinas.jpg" class="img-fluid"
+                            <img src="Assets/img/maquinas_png.jpg" class="img-fluid"
                                 alt="Limpieza profesional de alfombras">
                         </div>
                     </div>
 
                     <div class="col-lg-6 text-end">
                         <h2 class="fw-bold display-6 mt-2">
-                            Limpieza Profesional de Alfombras
+                            Materiales de primera calidad
                         </h2>
 
                         <p class="text-muted">
-                            Somos una empresa especializada en limpieza profunda de alfombras,
-                            tapices y cortinas. Utilizamos equipos profesionales y productos ecológicos
-                            para garantizar espacios limpios, frescos y seguros para tu familia
-                            o empresa.
+                            Siempre pensando en el cuidado de los articulos de los clientes
+                            por eso usamos materiales y maquinas de calida
                         </p>
                     </div>
 
@@ -220,7 +270,7 @@
                 <form id="contactForm" class="contact-form-card-floating">
 
                     <div class="text-center">
-                        <h2 class="section-heading text-uppercase">FORMULARIO</h2>
+                        <h2 class="section-heading text-uppercase">CONSULTA GRATIS</h2>
                         <h3 class="section-subheading">
                             Llena este formulario para que nos pongamos en contacto
                         </h3>

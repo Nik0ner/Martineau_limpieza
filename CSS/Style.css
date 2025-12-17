@@ -31,13 +31,12 @@ header {
     padding-bottom: 15px;
 }
 
-.hero {
+
+/* Carrusel */
+.hero-slide {
     height: 80vh;
-    background-image: url("../Assets/img/Casa_bonita.jpg");
     background-size: cover;
     background-position: center;
-    margin-top: -90px;
-    padding-top: 90px;
     position: relative;
 }
 
@@ -47,12 +46,22 @@ header {
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-
-    background: rgba(0, 0, 0, 0);
     color: white;
-    padding: 12px 24px;
-    border-radius: 6px;
     text-align: center;
+    padding: 12px 24px;
+}
+
+/* Overlay opcional para mejor lectura */
+.hero-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-caption {
+    position: absolute;
+    z-index: 2;
 }
 
 /* Links */
@@ -223,7 +232,7 @@ textarea.form-control-white {
 
 .about-img-wrapper-uno {
     width: 100%;
-    max-width: 480px;
+    max-width: 600px;
     height: 420px;
     border-radius: 24px;
     overflow: hidden;
