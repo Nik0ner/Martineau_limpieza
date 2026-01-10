@@ -239,12 +239,41 @@ textarea.form-control-white {
 
 .about-img-wrapper-uno {
     width: 100%;
-    max-width: 600px;
+    max-width: auto;
     height: 420px;
+    margin-left: auto;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
+
+@media (max-width: 768px) {
+
+
+    /* Forzar que el contenedor de la imagen use el 100% del ancho */
+    .about-img-wrapper,
+    .about-img-wrapper-uno {
+        max-width: 100% !important;
+        width: 100% !important;
+        height: 300px;
+        /* Ajustamos la altura para que no sea tan alta en móvil */
+        margin-left: 0;
+        border-radius: 15px;
+        /* Redondeado más sutil para móvil */
+        /* Recuperar bordes redondeados */
+        border-radius: 24px !important;
+        overflow: hidden !important;
+    }
+
+    .about-img-wrapper img,
+    .about-img-wrapper-uno img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Esto asegura que la imagen no se estire feo */
+    }
+}
+
 
 
 .about-img-wrapper img {
@@ -416,15 +445,18 @@ footer.footer .footer-bottom {
 ========================= */
 
 @media (max-width: 991px) {
+
     /* 1. Forzar fondo negro cuando el menú está abierto en móvil */
     .navbar-collapse {
-        backdrop-filter: blur(40px);    /* Efecto de vidrio esmerilado */
+        backdrop-filter: blur(40px);
+        /* Efecto de vidrio esmerilado */
         -webkit-backdrop-filter: blur(40px);
     }
 
     /* 2. Reducir el logo en móviles para que no choque con la hamburguesa */
     .logo {
-        max-height: 55px !important; /* Mucho más manejable en cel */
+        max-height: 55px !important;
+        /* Mucho más manejable en cel */
     }
 
     /* 3. Ajustar la altura de la navbar en móvil */
@@ -432,7 +464,8 @@ footer.footer .footer-bottom {
         height: auto !important;
         padding-top: 10px;
         padding-bottom: 10px;
-        background-color: rgba(0, 0, 0, 0.9) !important; /* Fondo sólido en móvil para que se lea */
+        background-color: rgba(0, 0, 0, 0.9) !important;
+        /* Fondo sólido en móvil para que se lea */
     }
 
     /* 4. Alinear logo y hamburguesa */
