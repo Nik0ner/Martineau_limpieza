@@ -331,7 +331,7 @@ textarea.form-control-white {
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     .card-contact-info .card-title {
         font-size: 0.9rem;
@@ -473,7 +473,7 @@ footer.footer .footer-bottom {
    SOLUCIÓN RESPONSIVE NAVBAR
 ========================= */
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
 
     /* 1. Forzar fondo negro cuando el menú está abierto en móvil */
     .navbar-collapse {
