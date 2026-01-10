@@ -35,6 +35,7 @@ header {
 
 /* Carrusel */
 .hero-slide {
+    background-image: url("../Assets/img/Casa_bonita.jpg");
     height: 80vh;
     background-size: cover;
     background-position: center;
@@ -408,4 +409,50 @@ footer.footer .footer-bottom {
     .parallax-section {
         background-attachment: scroll;
     }
+}
+
+/* =========================
+   SOLUCIÓN RESPONSIVE NAVBAR
+========================= */
+
+@media (max-width: 991px) {
+    /* 1. Forzar fondo negro cuando el menú está abierto en móvil */
+    .navbar-collapse {
+        backdrop-filter: blur(40px);    /* Efecto de vidrio esmerilado */
+        -webkit-backdrop-filter: blur(40px);
+    }
+
+    /* 2. Reducir el logo en móviles para que no choque con la hamburguesa */
+    .logo {
+        max-height: 80px !important; /* Mucho más manejable en cel */
+    }
+
+    /* 3. Ajustar la altura de la navbar en móvil */
+    .navbar-custom {
+        height: auto !important;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: rgba(0, 0, 0, 0.9) !important; /* Fondo sólido en móvil para que se lea */
+    }
+
+    /* 4. Alinear logo y hamburguesa */
+    .navbar-brand {
+        margin-right: 0;
+    }
+
+    /* 5. Ajustar el Hero Caption para que no tape todo en pantallas chicas */
+    .hero-caption {
+        width: 90%;
+        bottom: 20px;
+        padding: 15px;
+    }
+}
+
+/* Arreglo extra para la hamburguesa (el icono) que a veces se ve azul o invisible */
+.navbar-toggler {
+    border-color: rgba(255,255,255,0.5) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3 baseProfile='full'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
