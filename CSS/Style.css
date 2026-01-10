@@ -2,6 +2,7 @@
     --bs-dark: #000000;
 }
 
+
 /* Navbar negro puro */
 .bg-dark {
     color: #000000;
@@ -49,6 +50,11 @@ header {
     color: white;
     text-align: center;
     padding: 12px 24px;
+    font-size: clamp(20px, 4vw, 30px);
+
+    background: rgba(82, 82, 82, 0.45);
+    border-radius: 30px;
+    backdrop-filter: blur(6px);
 }
 
 /* Overlay opcional para mejor lectura */
@@ -172,7 +178,7 @@ textarea.form-control-white {
     font-weight: 700;
     border: none;
     padding: 15px 30px;
-    border-radius: 10px;
+    border-radius: 60px;
     transition: background-color 0.3s ease;
 }
 
@@ -371,4 +377,35 @@ footer.footer .footer-bottom {
     text-align: center;
     color: #cfd8dc;
     font-size: 13px;
+}
+
+.parallax-section {
+    position: relative;
+    min-height: 60vh;
+    /* altura de la sección */
+    background-image: url("../Assets/img/alfombras_lavando.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* 🔑 esto hace el efecto */
+    display: flex;
+    align-items: center;
+}
+
+.parallax-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 20, 30, 0.55);
+}
+
+.parallax-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .parallax-section {
+        background-attachment: scroll;
+    }
 }
