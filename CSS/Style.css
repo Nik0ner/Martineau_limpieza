@@ -1,3 +1,23 @@
+/* Bloquear desbordamiento horizontal */
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* Evitar que las filas de Bootstrap creen márgenes negativos hacia los lados */
+.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+/* Asegurar que todas las cajas respeten el ancho total incluyendo su padding */
+* {
+    box-sizing: border-box;
+}
+
+
 :root {
     --bs-dark: #000000;
 }
@@ -156,6 +176,15 @@ header {
     margin: 40px auto 0;
     /* Nuevo margen: 40px arriba, centrado, 0 abajo */
     padding: 60px;
+}
+
+@media (max-width: 768px) {
+    .contact-form-card-floating {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 20px 0 !important;
+        padding: 30px 15px !important;
+    }
 }
 
 /* CAMPOS DE FORMULARIO */
