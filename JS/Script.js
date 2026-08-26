@@ -3,25 +3,66 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Función para encoger la barra de navegación
     var navbarShrink = function () {
-        // Selector: Usamos la clase 'navbar-custom' que tienes en tu HTML
+        // clase 'navbar-custom'
         const navbarCollapsible = document.body.querySelector('.navbar-custom');
 
         if (!navbarCollapsible) {
             return;
         }
 
-        // Comprueba si el desplazamiento vertical es 0 (estás arriba del todo)
         if (window.scrollY === 0) {
             navbarCollapsible.classList.remove('navbar-shrink');
         } else {
-            // Si has hecho scroll, añade la clase
             navbarCollapsible.classList.add('navbar-shrink');
         }
     };
 
-    // Llama a la función una vez al cargar (en caso de refrescar la página no en el tope)
     navbarShrink();
 
-    // Llama a la función cada vez que se desplaza la página
     document.addEventListener('scroll', navbarShrink);
 });
+
+
+
+
+function enviar() {
+    let nombre = document.getElementById("nombre");
+    let email = document.getElementById("email");
+    let telefono = document.getElementById("telefono");
+    let servicio = document.getElementById("servicio");
+
+    if (nombre.value == "") {
+        nombre.style.border = "2px solid red";
+    } else {
+        nombre.style.border = "2px solid green";
+        console.log("Campo Nombre completado");
+    }
+
+    if (email.value == "") {
+        email.style.border = "2px solid red";
+    } else {
+        email.style.border = "2px solid green";
+        console.log("Campo Email completado");
+    }
+
+    if (telefono.value == "") {
+        telefono.style.border = "2px solid red";
+    } else {
+        telefono.style.border = "2px solid green";
+        console.log("Campo Teléfono completado");
+    }
+
+    if (servicio.value == "") {
+        servicio.style.border = "2px solid red";
+    } else {
+        servicio.style.border = "2px solid green";
+        console.log("Campo Servicio completado");
+    }
+
+    if (nombre.value == "" || email.value == "" || telefono.value == "" || servicio.value == "") {
+        alert("Completa todos los campos");
+    } else {
+        alert("Mensaje enviado correctamente");
+        console.log("Mensaje enviado correctamente");
+    }
+}

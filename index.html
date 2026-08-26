@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CL">
 
 <!-- HEAD CABEZA DEL CODIGO : AQUI VAN COSAS BASICAS LOS ENLACES BOOSTRAP / JS / CSS -->
 
@@ -235,22 +235,18 @@
 
                     <div class="row g-4 mt-4">
                         <div class="col-md-6">
-                            <input class="form-control form-control-white mb-3" type="text" placeholder="Nombre"
-                                required>
-                            <input class="form-control form-control-white mb-3" type="email" placeholder="Email"
-                                required>
-                            <input class="form-control form-control-white mb-3" type="tel" placeholder="Teléfono"
-                                required>
+                            <input id="nombre" class="form-control form-control-white mb-3" type="text" placeholder="Nombre">
+                            <input id="email" class="form-control form-control-white mb-3" type="email" placeholder="Email">
+                            <input id="telefono" class="form-control form-control-white mb-3" type="tel" placeholder="Teléfono">
                         </div>
 
                         <div class="col-md-6">
-                            <textarea class="form-control form-control-white h-100" placeholder="Servicio requerido"
-                                required></textarea>
+                            <textarea id="servicio" class="form-control form-control-white h-100" placeholder="Servicio requerido"></textarea>
                         </div>
                     </div>
 
                     <div class="text-center mt-4">
-                        <button class="btn btn-xl btn-bootstrap-blue">
+                        <button class="btn btn-xl btn-bootstrap-blue" type="button" onclick="enviar()">
                             Enviar Mensaje
                         </button>
                     </div>
@@ -321,7 +317,7 @@
 
             <!-- FOOTER BOTTOM -->
             <div class="footer-bottom text-center mt-5 pt-4">
-                <small>© 2025 Rodolfo Martineau · Todos los derechos reservados</small>
+                <small>© 2026 Rodolfo Martineau · Todos los derechos reservados</small>
             </div>
         </div>
     </footer>
